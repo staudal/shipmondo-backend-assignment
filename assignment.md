@@ -18,4 +18,4 @@ The focus of the assignment is exclusively on backend code, so it should be with
 
 You can use whatever language and framework that you prefer.
 
-You can find all the necessary endpoints needed for your application from our API reference [here]([https://www.example.com](https://shipmondo.dev/api-reference#/)
+You can find all the necessary endpoints needed for your application from our API reference [here](https://shipmondo.dev/api-reference#/)
