@@ -1,0 +1,27 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Balance {
+  id     Int @id @default(autoincrement())
+  amount Int
+}
+
+model Shipment {
+  id         Int       @id @default(autoincrement())
+  shipmentId Int
+  createdAt  DateTime  @default(now())
+  packages   Package[]
+}
+
+model Package {
+  id            Int      @id @default(autoincrement())
+  packageNumber BigInt
+  shipment      Shipment @relation(fields: [shipmentId], references: [id])
+  shipmentId    Int
+}
